@@ -11,7 +11,14 @@
 
 <body>
     <h1>학과 별 대면 강의 리스트</h1>
+
+    <!-- 학과   강의명 대면 -->
+    <!-- select 태그 이용해서 해당 학과 선택하면 대면인 강의들 쭉 나오게 -->
+    <!-- 대면/비대면 select 대면 누르면 대면인 강의들 나오고 비대면 누르면 비대면 강의들 나오게 -->
+
+
     <button class="button" type="button" onclick="location.href='Landing.html'">학과별</button>
+
     지금 시간은 <b>
         <?
         echo "현재 날짜 : " . date("Y-m-d") . "<br/>";
@@ -20,7 +27,6 @@
         ?>
     </b> 입니다.
 
-    <h1>장ㅈㅇㅈㅈㅈㅇ지ㅏ밥ㅈㅇ</h1>
 
 </body>
 
