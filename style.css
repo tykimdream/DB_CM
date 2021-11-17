@@ -1,0 +1,35 @@
+body{
+    background-color: thistle;
+}
+
+.title{
+    /* margin-top: 5%; */
+    flex:1;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    padding:5px;
+    text-align: center;
+    background-color: rgb(132, 132, 177);
+}
+
+.buttons{
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    transform: translateX(-50%);
+
+}
+
+.button{
+    background-color: rgb(197, 190, 190);
+    font-size: 25px;
+    padding:10px;
+    margin: 15px;
+    display: block;
+    width: 500px;
+}
+
+.button:hover{
+    background-color: rgb(233, 153, 222);
+}
