@@ -11,9 +11,8 @@
 </head>
 
 <body onload="startTime()">
-    <div class="title" onclick="location.href='Landing.php'">
-        <p>코로나 펜데믹 시대에 따른</p>
-        <p> 강좌 관리 시스템</p>
+    <div class="title">
+        <p> 코로나 펜데믹 시대에 따른 강좌 관리 시스템 </p>
     </div>
     <div id="clock"></div>
 
@@ -22,12 +21,12 @@
         <div class="button" type="button" onclick="location.href='classList.php'">학과 별 대면 강의 리스트</div>
         <div class="button" type="button" onclick="location.href='studentInClass.php'">강의 별 대면을 선택한 학생</div>
         <div class="button" type="button" onclick="location.href='proStuInfo.php'">담당 교수 별 학생의 대면 여부</div>
-
     </div>
 
     <div class="footer">
         <p>김지환 윤혜린<br>
-            2021 2학기 DB Project</p>
+            <span class="smallfooter">2021 2학기 DB Project</span>
+        </p>
     </div>
 </body>
 

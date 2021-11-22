@@ -1,43 +1,30 @@
-body{
-    background-color: thistle;
-}
-
-.footer {
-        position: absolute;
-        left: 0;
-        bottom: 0;
-        width: 100%;
-        padding: 5px 0;
-        text-align: center;
-        color: rgb(132, 132, 177);
-}
-
 #clock {
     position: absolute;
     right: 0;
-    bottom: 0;
-    width: 100%;
-    padding: 5px 0;
+    top: 0;
     text-align: right;
     font-size: 20px;
-    font-weight: bold;
+    font-weight: 600;
+}
+
+body{
+    background-color: rgb(242, 244, 248);
 }
 
 .title{
-    /* margin-top: 5%; */
     flex:1;
     position: absolute;
     left: 50%;
     transform: translateX(-50%);
-    padding:5px;
+    padding-left: 15px;
+    padding-right: 15px;
+
     text-align: center;
-    background-color: rgb(103, 103, 150);
-    margin-top: 20px;
-    font-size: 25px;
-    border-radius: 30px;
-}
-.title:hover{
-    cursor: pointer;
+    background-color: rgb(136, 156, 201);
+    margin-top: 50px;
+    font-size: 28px;
+    font-weight: bold;
+    border-radius: 7px;
 }
 
 .buttons{
@@ -50,18 +37,33 @@ body{
 }
 
 .button{
-    background-color: rgb(197, 190, 190);
-    font-size: 25px;
+    background-color: rgb(213, 218, 241);
+    font-size: 21px;
+    font-weight: 600;
+    color : rgba(44, 43, 43, 0.938);
     padding:10px;
     margin: 15px;
     display: block;
     width: 400px;
     text-align: center;
-    border: 1px solid black;
     border-radius: 10px;
 }
 
 .button:hover{
-    background-color: rgb(233, 153, 222);
+    background-color: rgb(137, 145, 184);
     cursor: pointer;
+}
+
+.footer {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+    color: rgb(132, 132, 177);
+    font-size: 14px;
+    background-color: rgb(222, 227, 233);
+}
+.smallfooter{
+font-size: 12px;
 }
