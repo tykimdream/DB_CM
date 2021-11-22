@@ -2,6 +2,26 @@ body{
     background-color: thistle;
 }
 
+.footer {
+
+        position: absolute;
+    
+        left: 0;
+    
+        bottom: 0;
+    
+        width: 100%;
+    
+        padding: 5px 0;
+    
+        text-align: center;
+    
+        color: rgb(132, 132, 177);
+    
+        /* background: blue; */
+    
+}
+
 .title{
     /* margin-top: 5%; */
     flex:1;
@@ -10,16 +30,19 @@ body{
     transform: translateX(-50%);
     padding:5px;
     text-align: center;
-    background-color: rgb(132, 132, 177);
-    margin-bottom: 10px;
+    background-color: rgb(103, 103, 150);
+    margin-top: 20px;
+    font-size: 25px;
+    border-radius: 30px;
 }
 
 .buttons{
     position: absolute;
-    top: 40%;
-    left: 55%;
+    top: 30%;
+    left: 50%;
     transform: translateX(-50%);
     margin-top: 10px;
+    margin-bottom : 15px;
 }
 
 .button{

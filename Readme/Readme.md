@@ -1,1 +1,1 @@
-접속 주소 http://127.0.0.1:81/CM/Landing.html
+접속 주소 http://localhost/CM/Landing.html
