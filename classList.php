@@ -28,15 +28,6 @@
 
     <button class="button" type="button" onclick="location.href='Landing.php'">학과별</button>
 
-    지금 시간은 <b>
-        <?
-        echo "현재 날짜 : " . date("Y-m-d") . "<br/>";
-        echo "현재 시간 : " . date("H:i:s") . "<br/>";
-        echo "현재 일시 : " . date("Y-m-d H:i:s") . "<br/>";
-        ?>
-    </b> 입니다.
-
-
 </body>
 
 </html>
