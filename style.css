@@ -3,23 +3,22 @@ body{
 }
 
 .footer {
-
         position: absolute;
-    
         left: 0;
-    
         bottom: 0;
-    
         width: 100%;
-    
         padding: 5px 0;
-    
         text-align: center;
-    
         color: rgb(132, 132, 177);
-    
-        /* background: blue; */
-    
+}
+
+#clock {
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 100%;
+    padding: 5px 0;
+    text-align: right;
 }
 
 .title{

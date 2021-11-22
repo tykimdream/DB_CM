@@ -6,11 +6,14 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
+    <script type="text/javascript" src="clock.js"></script>
+
     <title>담당 교수 별 학생의 대면 여부</title>
 </head>
 
-<body>
+<body onload="startTime()">
     <h1>담당 교수 별 학생의 대면 여부</h1>
+    <div id="clock"></div>
 
     <!-- 교수이름   학생이름    대면 여부   접종상태(학생) -->
     <!-- 1안 학과 -> 교수 선택하게 selecet 태그 -->
@@ -25,7 +28,7 @@
     mysqli_close($connect);
     ?>
 
-    <button class="button" type="button" onclick="location.href='Landing.html'">학과별</button>
+    <button class="button" type="button" onclick="location.href='Landing.php'">학과별</button>
     지금 시간은 <b> <? echo date("Y-m-d H:i:s") ?> </b> 입니다.
 
 </body>

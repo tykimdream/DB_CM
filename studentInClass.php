@@ -6,11 +6,14 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
+    <script type="text/javascript" src="clock.js"></script>
+
     <title>강의 별 대면을 선택한 학생</title>
 </head>
 
-<body>
+<body onload="startTime()">
     <h1>강의 별 대면을 선택한 학생</h1>
+    <div id="clock"></div>
 
     <!-- 강의   학생이름/학번 -->
 
@@ -24,7 +27,7 @@
     mysqli_close($connect);
     ?>
 
-    <button class="button" type="button" onclick="location.href='Landing.html'">학과별</button>
+    <button class="button" type="button" onclick="location.href='Landing.php'">학과별</button>
     지금 시간은 <b> <?
                 echo date("Y-m-d H:i:s")
                 ?> </b> 입니다.
