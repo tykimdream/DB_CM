@@ -15,7 +15,14 @@
     <!-- 학과   강의명 대면 -->
     <!-- select 태그 이용해서 해당 학과 선택하면 대면인 강의들 쭉 나오게 -->
     <!-- 대면/비대면 select 대면 누르면 대면인 강의들 나오고 비대면 누르면 비대면 강의들 나오게 -->
+    <?
+    $connect = mysqli_connect("localhost", "root", "1234");
+    mysqli_select_db($connect, "cm");
+    echo "DB 연동 완료";
 
+    $sql = "select * from ";
+    mysqli_close($connect);
+    ?>
 
     <button class="button" type="button" onclick="location.href='Landing.html'">학과별</button>
 
