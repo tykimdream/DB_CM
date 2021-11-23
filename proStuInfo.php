@@ -7,12 +7,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
     <script type="text/javascript" src="clock.js"></script>
+    <script src="https://use.fontawesome.com/releases/v5.2.0/js/all.js"></script>
 
     <title>담당 교수 별 학생의 대면 여부</title>
 </head>
 
 <body onload="startTime()">
-    <h1>담당 교수 별 학생의 대면 여부</h1>
+    <span class="subTitle">담당 교수 별 학생의 대면 여부
+    </span>
+    <span class="returnButton" type="button" onclick="location.href='Landing.php'"><i class="fas fa-home"></i> 홈으로 돌아가기 </span>
+
     <div id="clock"></div>
 
     <!-- 교수이름   학생이름    대면 여부   접종상태(학생) -->
@@ -28,7 +32,6 @@
     mysqli_close($connect);
     ?>
 
-    <button class="button" type="button" onclick="location.href='Landing.php'">학과별</button>
 </body>
 
 </html>

@@ -18,4 +18,4 @@ DB 작성 완료, import 완료
 11.25
 DB Data 추가
 sql문 작성
-StudentInfo.php 페이지 구현
+StudentInfo.php 페이지 구현 및 php 관련 주석 작성
