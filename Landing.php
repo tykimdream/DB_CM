@@ -24,7 +24,7 @@
     </div>
 
     <div class="footer">
-        <p>김지환 윤혜린<br>
+        <p>제작자 : 김지환 윤혜린<br>
             <span class="smallfooter">2021 2학기 DB Project</span>
         </p>
     </div>
