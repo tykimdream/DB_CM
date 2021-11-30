@@ -1,6 +1,6 @@
 2021 2학기 Database Project
 코로나 시대에 따른 강좌 관리 시스템
-
+제작자 김지환, 윤혜린
 
 접속 주소 http://localhost/CM/Landing.php
 
