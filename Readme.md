@@ -19,3 +19,9 @@ DB 작성 완료, import 완료
 DB Data 추가
 sql문 작성
 StudentInfo.php 페이지 구현 및 php 관련 주석 작성
+
+11.30
+학생 정보 CRUD 기획
+
+12.1
+학생 정보 edit design
