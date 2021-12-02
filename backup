@@ -1,0 +1,33 @@
+되는 버젼
+
+
+<div class="searchForm">
+    <form action="studentInfoUpdate.php" method="POST">
+        <input class="submitButton" type="text" name="name" placeholder="수정하려면 이름 입력" />
+        접종여부 <select name="vac" id="vac">
+            <option value="X">X</option>
+            <option value="1차">1차</option>
+            <option value="2차">2차</option>
+            <option value="3차">3차</option>
+        </select>
+        발열여부 <select name="fever" id="fever">
+            <option value="X">X</option>
+            <option value="O">O</option>
+        </select>
+        <button class="submitButton" type="submit"> 수정 </button>
+        <!-- <button class="submitButton" type="submit"> 학생삭제 </button> -->
+    </form>
+</div>
+
+
+<?
+$sql = "SELECT * FROM student;";
+
+$name_u = $_POST['name'];
+$id_u = $_POST['id'];
+$vac_u = $_POST['vac'];
+$fever_u = $_POST['fever'];
+$sql = "UPDATE student SET vac = '$vac_u', fever = '$fever_u' WHERE name =  '$name_u'";
+mysqli_query($connect, $sql);
+mysqli_close($connect);
+?>
