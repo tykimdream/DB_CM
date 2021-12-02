@@ -26,9 +26,10 @@
       <input type="text" name="id" placeholder="교수님 성함을 입력해주세요">
       <input type="submit" value="검색">
     </form>
+    <p>검색하신 교수님 성함 : <?php echo $_POST["id"]; ?></p>
 
 
-    <h1> 담당 교수 별 학생 전체 목록 </h1>
+
     <div class="tableDiv">
         <table>
             <tr class="tableTitle">
@@ -36,14 +37,17 @@
                 <td>소속학과</td>
                 <td>학생 이름</td>
                 <td>학생 학번</td>
+                <td>학생 상태</td>
                 <td>백신 접종 여부</td>
                 <td>학생 발열 여부</td>
             </tr>
     <?
 
-
+    // Mysql 접속
     $connect = mysqli_connect("localhost", "root", "1234");
+    // 해당 DB로 이동
     mysqli_select_db($connect, "cm");
+
 
     $professorName = $_POST["id"];
 
@@ -65,9 +69,9 @@
     mysqli_query($connect, "set session character_set_client=utf8;");
 
      // 쿼리문 작성하여 변수 sql에 저장
-     $sql = "select professor.name, professor.dept, student.name, student.id, student.vac, student.fever
-             from professor, instruct, student
-             where professor.id = instruct.professor_id and  instruct.student_id = student.id";
+     $sql = "select professor.name, professor.dept, student.name, student.id, attend.student_stmt, student.vac, student.fever
+             from professor, instruct, attend, student
+             where professor.name like '%$professorName%' and professor.id = instruct.professor_id and instruct.student_id = student.id and attend.student_id = student.id and attend.student_stmt = '대면'";
      
 
      // 쿼리문 실행
@@ -76,7 +80,7 @@
      $fields = mysqli_num_fields($result);
      $rows = mysqli_num_rows($result);
 
-
+     echo "$professorName 교수님의 담당 학생 중 대면으로 수업을 듣는 학생 목록";
      while ($row = mysqli_fetch_row($result)) {
          echo "<tr>";
          for ($i = 0; $i < $fields; $i = $i + 1) {

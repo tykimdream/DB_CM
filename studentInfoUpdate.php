@@ -24,12 +24,12 @@
             학번으로 검색 <input type="text" name="id" />
             <input type="submit" />
         </form> -->
-
-        <form action="studentInfoUpdate.php" method="POST">
-            이름으로 검색 <input type="text" name="name" />
-            <button class="submitButton" type="submit"> 제출 </button>
-        </form>
-
+        <div class="searchForm">
+            <form action="studentInfoUpdate.php" method="POST">
+                이름으로 검색 <input class="submitButton" type="text" name="name" />
+                <button class="submitButton" type="submit"> 검색 </button>
+            </form>
+        </div>
         <?
         $connect = mysqli_connect("localhost", "root", "1234");
         mysqli_select_db($connect, "cm");
@@ -71,7 +71,7 @@
         echo "<div class='tableDiv'>";
         echo "<table> <tr class='tableTitle'>";
         echo "<td>학번</td> <td>이름</td> <td>학과</td> <td>학년</td> <td>거주 지역</td>";
-        echo "<td>전화번호</td> <td>접종 여부</td> <td>발열 여부</td>";
+        echo "<td>전화번호</td> <td>백신 접종 여부</td> <td>발열 여부</td>";
         echo "</tr>";
 
         while ($row = mysqli_fetch_row($result)) {
@@ -82,9 +82,37 @@
             echo "</tr>";
         }
         echo "</table>";
-        mysqli_close($connect);
+
         ?>
 
+        <div class="searchForm">
+            <form action="studentInfoUpdate.php" method="POST">
+                발열여부 <select name="fever" id="fever">
+                    <option value="X">X</option>
+                    <option value="O">O</option>
+                </select>
+                <button class="submitButton" type="submit"> 수정 </button>
+            </form>
+        </div>
+
+        <div class="searchForm">
+            <form action="studentInfoUpdate.php" method="POST">
+                접종여부 <select name="vac" id="vac">
+                    <option value="X">X</option>
+                    <option value="1차">1차</option>
+                    <option value="2차">2차</option>
+                    <option value="3차">3차</option>
+                </select>
+                <button class="submitButton" type="submit"> 수정 </button>
+                <!-- <button class="submitButton" type="submit"> 학생삭제 </button> -->
+            </form>
+        </div>
+        <?
+
+        $vac_u = $_POST['vac'];
+        $fever_u = $_POST['fever'];
+        mysqli_close($connect);
+        ?>
     </div>
 
 </body>

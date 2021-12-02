@@ -146,5 +146,8 @@ tr, td{
 }
 .submitButton{
     display: inline;
-    color: red;
+    /* color: red; */
+}
+.searchForm{
+    margin-top:20px;
 }
