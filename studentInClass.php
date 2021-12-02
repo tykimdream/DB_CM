@@ -16,9 +16,9 @@
     <span class="returnButton" type="button" onclick="location.href='Landing.php'"><i class="fas fa-home"></i> 홈으로 돌아가기 </span>
     <div id="clock"></div>
 
-    <div>강의 검색</div>
+
     <form action="studentInClass_res.php" method="post">
-        <input type="text" name="id" placeholder="학수번호 7자리를 입력해주세요">
+        강의 검색<input type="text" name="id" placeholder="학수번호 7자리를 입력해주세요">
         <input type="submit" value="검색">
     </form>
 

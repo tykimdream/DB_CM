@@ -151,3 +151,10 @@ tr, td{
 .searchForm{
     margin-top:20px;
 }
+
+.selectDept_class{
+    margin-top:100px;
+    float: right;
+    display: flex;
+    margin: 10px;
+}
