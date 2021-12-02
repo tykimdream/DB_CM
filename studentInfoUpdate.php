@@ -19,13 +19,21 @@
     <!-- 학생의 대면, 비대면 / 백신 0,1,2차 수정 가능하게 select 만들고 sql 수정하도록 함 -->
 
     <div class="studentInfoUpdataPage">
+
+        <!-- <form action="studentInfoUpdate.php" method="POST">
+            학번으로 검색 <input type="text" name="id" />
+            <input type="submit" />
+        </form> -->
+
+        <form action="studentInfoUpdate.php" method="POST">
+            이름으로 검색 <input type="text" name="name" />
+            <button class="submitButton" type="submit"> 제출 </button>
+        </form>
+
         <?
-        // Mysql 접속
         $connect = mysqli_connect("localhost", "root", "1234");
-        // 해당 DB로 이동
         mysqli_select_db($connect, "cm");
 
-        // DB 접근 확인
         if (mysqli_connect_errno()) {
 
             echo "MySQL 접속 실패" . mysqli_connect_error();
@@ -35,22 +43,48 @@
             echo 'console.log("DB 접근 성공")';
             echo '</script>';
         }
-
-        // 한글 깨짐 관련
         mysqli_query($connect, "set session character_set_connection=utf8;");
         mysqli_query($connect, "set session character_set_results=utf8;");
         mysqli_query($connect, "set session character_set_client=utf8;");
 
-        // 쿼리문 작성하여 변수 sql에 저장
-        $sql = "select * from student where id = '여기서 값 받아서 오기' ";
+        $sql = "SELECT * FROM student;";
+
+        // $id_u = "987654321";
+        $name_u = "987654321";
+
+        // $id_u = $_POST['id'];
+        $name_u = $_POST['name'];
+
+        // if ($id_u != "987654321") {
+        //     $sql = "SELECT * FROM student WHERE id = ('$id_u');";
+        // }
+
+        if ($name_u != "987654321") {
+            $sql = "SELECT * FROM student WHERE name = '$name_u';";
+        }
+
         // 쿼리문 실행
         $result = mysqli_query($connect, $sql);
         // fetch하기 위하여 쿼리 결과를 이용하여 필드 반환
         $fields = mysqli_num_fields($result);
 
+        echo "<div class='tableDiv'>";
+        echo "<table> <tr class='tableTitle'>";
+        echo "<td>학번</td> <td>이름</td> <td>학과</td> <td>학년</td> <td>거주 지역</td>";
+        echo "<td>전화번호</td> <td>접종 여부</td> <td>발열 여부</td>";
+        echo "</tr>";
 
+        while ($row = mysqli_fetch_row($result)) {
+            echo "<tr>";
+            for ($i = 0; $i < $fields; $i = $i + 1) {
+                echo "<td>$row[$i]</td>";
+            }
+            echo "</tr>";
+        }
+        echo "</table>";
         mysqli_close($connect);
         ?>
+
     </div>
 
 </body>

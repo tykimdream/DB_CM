@@ -144,3 +144,7 @@ tr, td{
     display: flex;
     margin: 10px;
 }
+.submitButton{
+    display: inline;
+    color: red;
+}

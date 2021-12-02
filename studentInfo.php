@@ -16,7 +16,7 @@
     <span class="subTitle">학생 정보 조회</span>
     <span class="returnButton" type="button" onclick="location.href='Landing.php'"><i class="fas fa-home"></i> 홈으로 돌아가기 </span>
     <span class="editButton" type="button" onclick="location.href='addStudent.php'"><i class="fas fa-user-plus"></i> 학생 추가 </span>
-    <span class="editButton" type="button" onclick="location.href='Landing.php'"><i class="fas fa-user-edit"></i> 학생 정보 수정 </span>
+    <span class="editButton" type="button" onclick="location.href='studentInfoUpdate.php'"><i class="fas fa-user-edit"></i> 학생 정보 수정 </span>
     <div id="clock"></div>
     <!-- 학번   이름    학과    주소    전화번호    백신여부(미접, 1차, 2차)    발열여부(o,x) -->
     <!-- 발열여부, 백신 상태 업데이트 가능하게 만들기 -->

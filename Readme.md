@@ -25,3 +25,8 @@ StudentInfo.php 페이지 구현 및 php 관련 주석 작성
 
 12.1
 학생 정보 edit design
+
+12.2
+학생 추가 페이지 구현
+
+12.3

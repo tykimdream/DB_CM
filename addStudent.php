@@ -75,9 +75,9 @@
     // 쿼리문 실행
     $result = mysqli_query($connect, $sql);
 
-    echo '<script>';
-    echo 'console.log("DB 추가 성공")';
-    echo '</script>';
+    // echo '<script>';
+    // echo 'console.log("DB 추가 성공")';
+    // echo '</script>';
 
     mysqli_close($connect);
     ?>
