@@ -20,12 +20,12 @@
     <!-- 학생의 대면, 비대면 / 백신 0,1,2차 수정 가능하게 select 만들고 sql 수정하도록 함 -->
 
     <form action="addStudent.php" method="POST">
-        학번 <input type="text" name="id" required /><br>
-        이름 <input type="text" name="name" required /><br>
-        학과 <input type="text" name="dept" required /><br>
-        학년 <input type="text" name="grade" required /><br>
-        거주 지역 <input type="text" name="address" required /><br>
-        전화번호 <input type="text" name="tel" required /><br>
+        학번 <input type="text" name="id" required />
+        이름 <input type="text" name="name" required />
+        학과 <input type="text" name="dept" required />
+        학년 <input type="text" name="grade" required />
+        거주 지역 <input type="text" name="address" required />
+        전화번호 <input type="text" name="tel" required />
         접종여부 <select name="vac" id="vac">
             <option value="X">X</option>
             <option value="1">1차</option>
@@ -33,8 +33,8 @@
             <option value="3">3차</option>
         </select><br>
         발열여부 <select name="fever" id="fever">
-            <option value="O">O</option>
             <option value="X">X</option>
+            <option value="O">O</option>
         </select><br>
         <input type="submit" />
     </form>

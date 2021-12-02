@@ -77,13 +77,28 @@ input{
 
 /* 개별 페이지 영역 */
 table{
-    width: 100%;
+    width: 98%;
     border-collapse: collapse;
+    align-items: center;
+    margin: auto;
 }
 
 tr, td{
     border:solid 1px;
     text-align: center;
+}
+.tableDiv{
+    padding-top: 25px;
+}
+
+.tableTitle{
+    font-size: 23px;
+    font-weight: bold;
+    
+}
+.tableform{
+    padding: 15px;
+    margin-top: 15px;
 }
 
 .returnButton{
@@ -92,7 +107,7 @@ tr, td{
     font-weight: 600;
     color : rgba(44, 43, 43, 0.938);
     padding: 10px;
-    margin: 10px;
+    margin-left: 10px;
     display: inline-block;
     width: 200px;
     text-align: center;
@@ -105,23 +120,9 @@ tr, td{
 .subTitle{
     font-size: 40px;
     font-weight: bold;
-    height: 100px;
+    height: 80px;
 }
 
-.tableDiv{
-    padding-top: 25px;
-}
-
-.tableTitle{
-    font-size: 23px;
-    font-weight: bold;
-    
-}
-.tableform{
-    padding: 20px;
-    margin: 20px;
-}
-    
 .editButton{
     color : rgba(44, 43, 43, 0.938);
     background-color: rgb(213, 218, 241);
@@ -137,4 +138,9 @@ tr, td{
 .editButton:hover{
     background-color: rgb(137, 145, 184);
     cursor: pointer;
+}
+.selectDept{
+    float: right;
+    display: flex;
+    margin: 10px;
 }

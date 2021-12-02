@@ -22,10 +22,9 @@
     <!-- 대면/비대면 select 대면 누르면 대면인 강의들 나오고 비대면 누르면 비대면 강의들 나오게 -->
 
     <div class="tableDiv">
-        <span class="subTitle"><a name="summary"></a>학과 별 강의 리스트</span>
 
         <!-- 학과선택 -->
-        <form action="classList.php" method="POST">
+        <form class="selectDept" action="classList.php" method="POST">
             <select name="select_Lecture">
                 <option value="0">전체보기</option>
                 <option value="1">경제통계학부</option>
