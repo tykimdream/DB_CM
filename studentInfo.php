@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css" type="text/css">
     <script type="text/javascript" src="clock.js"></script>
     <!-- 아이콘 사용하기 위하여 fontawesome을 이용 -->
     <script src="https://use.fontawesome.com/releases/v5.2.0/js/all.js"></script>
@@ -15,6 +15,8 @@
 <body onload="startTime()">
     <span class="subTitle">학생 정보 조회</span>
     <span class="returnButton" type="button" onclick="location.href='Landing.php'"><i class="fas fa-home"></i> 홈으로 돌아가기 </span>
+    <span class="editButton" type="button" onclick="location.href='addStudent.php'"><i class="fas fa-user-plus"></i> 학생 추가 </span>
+    <span class="editButton" type="button" onclick="location.href='Landing.php'"><i class="fas fa-user-edit"></i> 학생 정보 수정 </span>
     <div id="clock"></div>
     <!-- 학번   이름    학과    주소    전화번호    백신여부(미접, 1차, 2차)    발열여부(o,x) -->
     <!-- 발열여부, 백신 상태 업데이트 가능하게 만들기 -->
@@ -66,13 +68,15 @@
                 for ($i = 0; $i < $fields; $i = $i + 1) {
                     echo "<td>$row[$i]</td>";
                 }
+                echo "<td> <form method = 'post'>";
+                // 뭘 전달해야할까
                 echo "</tr>";
             }
             mysqli_close($connect);
             ?>
         </table>
     </div>
-
+    <!-- 개별적으로 학생의 대면, 비대면 / 백신 0,1,2차 수정 가능하게 버튼 만들고 onclick event로 처리 -->
 
 </body>
 

@@ -14,6 +14,9 @@ body{
 a{
     text-decoration: none;
 }
+input{
+    display: block;
+}
 .button{
     background-color: rgb(213, 218, 241);
     font-size: 21px;
@@ -118,4 +121,20 @@ tr, td{
     padding: 20px;
     margin: 20px;
 }
-
+    
+.editButton{
+    color : rgba(44, 43, 43, 0.938);
+    background-color: rgb(213, 218, 241);
+    font-size: 21px;
+    font-weight: 600;
+    padding: 10px;
+    margin: 10px;
+    display: inline-block;
+    width: 200px;
+    text-align: center;
+    border-radius: 20px;
+}
+.editButton:hover{
+    background-color: rgb(137, 145, 184);
+    cursor: pointer;
+}
