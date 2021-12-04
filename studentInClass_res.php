@@ -17,11 +17,12 @@
     <div id="clock"></div>
 
 
-    <div>강의 검색</div>
-    <form action="studentInClass_res.php" method="post">
-      <input type="text" name="id" placeholder="학수번호 7자리를 입력해주세요">
-      <input type="submit" value="검색">
-    </form>
+    <div class="searchForm">
+        <form action="studentInClass_res.php" method="post">
+            강의 검색 <input type="text" name="id" placeholder="학수번호 7자리를 입력해주세요">
+            <input type="submit" value="검색">
+        </form>
+    </div>
     <p>검색하신 학수번호 : <?php echo $_POST["id"]; ?></p>
 
 
@@ -71,9 +72,9 @@
             $sql = "select lecture.lec_id, lecture.lec_name, lecture.professor, lecture.dept, student.name, student.id, lecture.lec_statement, attend.student_stmt
                     from lecture, student, attend
                     where lecture.lec_id like '%$lecid%' and attend.lecture_id = lecture.lec_id and attend.student_stmt = '대면' and attend.student_id = student.id";
-            
-            
-            
+
+
+
             // 쿼리문 실행
             $result = mysqli_query($connect, $sql);
             // fetch하기 위하여 쿼리 결과를 이용하여 필드 반환
@@ -96,4 +97,5 @@
 
 </body>
 <? echo "총 $rows 명"; ?>
+
 </html>

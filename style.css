@@ -149,5 +149,11 @@ tr, td{
     /* color: red; */
 }
 .searchForm{
-    margin-top:20px;
+    float: right;
+    display: flex;
+    margin: 5px;
+}
+.searchInput{
+    display: inline;
+    width: 15px;
 }

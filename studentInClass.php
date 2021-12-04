@@ -16,16 +16,13 @@
     <span class="returnButton" type="button" onclick="location.href='Landing.php'"><i class="fas fa-home"></i> 홈으로 돌아가기 </span>
     <div id="clock"></div>
 
-
-    <form action="studentInClass_res.php" method="post">
-        강의 검색<input type="text" name="id" placeholder="학수번호 7자리를 입력해주세요">
-        <input type="submit" value="검색">
-    </form>
-
-
     <!-- 전체 강의 목록 출력 -->
     <h1> 전체 강의 목록 </h1>
     <div class="tableDiv">
+        <form class="selectDept" action="studentInClass_res.php" method="post">
+            강의 검색 &nbsp <input type="text" name="id" placeholder="학수번호를 입력해주세요(7문자)">
+            <input type="submit" value="검색">
+        </form>
         <table>
             <tr class="tableTitle">
                 <td>과목 번호</td>
