@@ -12,24 +12,22 @@
     <title>강의 별 대면을 선택한 학생</title>
 </head>
 
-<body onload="startTime()"><span class="subTitle">강의 별 대면을 선택한 학생</span>
+<body onload="startTime()">
+    <span class="subTitle">강의 별 대면을 선택한 학생</span>
     <span class="returnButton" type="button" onclick="location.href='Landing.php'"><i class="fas fa-home"></i> 홈으로 돌아가기 </span>
+    <span class="returnButton" type="button" onclick="location.href='studentInClass.php'"><i class="fas fa-school"></i> 돌아가기 </span>
+
     <div id="clock"></div>
 
-
-    <div class="searchForm">
-        <form action="studentInClass_res.php" method="post">
-            강의 검색 <input type="text" name="id" placeholder="학수번호 7자리를 입력해주세요">
-            <input type="submit" value="검색">
-        </form>
-    </div>
-    <p>검색하신 학수번호 : <?php echo $_POST["id"]; ?></p>
-
+    <div class="list" style="font-size: 2.0em; font-weight : bold">검색하신 학수번호 : <?php echo $_POST["id"]; ?></div>
+    <form class="searchForm" action="studentInClass_res.php" method="post">
+        강의 검색 &nbsp <input type="text" name="id" size="25" placeholder="학수번호 7자리를 입력해주세요">
+        <input type="submit" value="검색">
+    </form>
 
 
 
     <!-- 전체 강의 목록 출력 -->
-
     <div class="tableDiv">
         <table>
             <tr class="tableTitle">

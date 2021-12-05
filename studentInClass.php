@@ -17,10 +17,12 @@
     <div id="clock"></div>
 
     <!-- 전체 강의 목록 출력 -->
+    <!-- <div class="list" style="font-size: 2.0em; font-weight : bold"> 전체 강의 목록 </div> -->
     <h1> 전체 강의 목록 </h1>
+
     <div class="tableDiv">
-        <form class="selectDept" action="studentInClass_res.php" method="post">
-            강의 검색 &nbsp <input type="text" name="id" placeholder="학수번호를 입력해주세요(7문자)">
+        <form class="searchForm" action="studentInClass_res.php" method="post">
+            강의 검색 &nbsp <input type="text" name="id" size="25" placeholder="학수번호를 입력해주세요(7문자)">
             <input type="submit" value="검색">
         </form>
         <table>
