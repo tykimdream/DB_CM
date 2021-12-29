@@ -71,3 +71,5 @@ StudentInfo.php 페이지 구현 및 php 관련 주석 작성
 프로젝트 발표
 
 2021 2학기 Database Project  제작자 김지환, 윤혜린
+# Stack
+HTML, CSS, JAVASCRPIT, PHP, MYSQL
